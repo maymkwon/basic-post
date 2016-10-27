@@ -1,0 +1,20 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+    Company: Nomad connection
+    Publisher: Kwon Myung Hee <may.m.Kwon@gmail.com>
+    Location: South Korea
+    <name> -- <role> -- <twitter>
+
+# THANKS
+
+
+---
+
+# TECHNOLOGY COLOPHON
+
+    Atom
+    CSS3, HTML5
+    Apache Server Configs, jQuery, Modernizr, Normalize.css,
+    Gulp, Post-css
