@@ -24,12 +24,12 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
-        <!--[if lt IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+
 
         <!-- Add your site or application content here -->
         <div class="body_wrap">
+
+
             <header class="header">
                 <div class="header_wrap">
                     <h1>
@@ -47,13 +47,15 @@
                     </nav>
                 </div>
             </header>
+
+
             <main>
                 <div class="container">
                     <div class="content">
                         <div class="content-text">
                             <h2>콜싱크</h2>
-                            <p><strong>가장 쉽고 빠르게!</strong>PC에서 전화와 문자를 관리하는 방법!</p>
-                            <p>지금바로 콜싱크 앱을 PC에 설치하고<br>안드로이드 폰과 연결해 보세요</p>
+                            <p>가장 쉽고 빠르게!<br>PC에서 전화와 문자를<br>관리하는 방법!</p>
+
                             <div class="down-link-wrap">
                                 <div class="down-link">
                                     <span class="cate">PC 앱</span>
@@ -82,57 +84,58 @@
                             </div>
                         </div>
                         <div class="content-img">
-                            <img src="./images/callsync-main.png" alt="callsync-main"style="width:215px;" class="main">
-                            <img src="./images/callsync-detail.png" alt="callsync-detail" style="width:388px;" class="detail">
+                            <img src="./images/callsync-main.png" alt="callsync-main"style="width:258px;" class="main">
+                            <img src="./images/callsync-detail.png" alt="callsync-detail" style="width:395px;" class="detail">
                         </div>
                     </div>
                 </div>
-
             </main>
+
+
             <section class="function">
                 <div class="container">
                     <h2>다양한 기능, 끝없는 가능성!</h2>
                     <ul class="function-list">
                         <li>
                             <img src="./images/contents_icon_01.png" alt="" />
-                            전화받기 / 걸기
+                            <span>전화받기 / 걸기</span>
                         </li>
                         <li>
                             <img src="./images/contents_icon_02.png" alt="" />
-                            문자 받기 / 보내기
+                            <span>문자 받기 / 보내기</span>
                         </li>
                         <li>
                             <img src="./images/contents_icon_03.png" alt="" />
-                            링크문자 만들기 / 보내기
+                            <span>링크문자 만들기 / 보내기</span>
                         </li>
                         <li>
                             <img src="./images/contents_icon_04.png" alt="" />
-                            배경화면 / 색상 꾸미기
+                            <span>배경화면 / 색상 꾸미기</span>
                         </li>
-                        <li>
+                        <li class="unactive">
                             <img src="./images/contents_icon_05.png" alt="" />
-                            PC에서 주소록 편집하기
+                            <span>PC에서 주소록 편집하기</span>
                         </li>
-                        <li>
+                        <li class="unactive">
                             <img src="./images/contents_icon_06.png" alt="" />
-                            PC에서 스마트폰으로<br>영상통화
+                            <span>PC에서 스마트폰으로<br>영상통화</span>
                         </li>
                     </ul>
                     <div class="function-add">
                         <img src="./images/contents_icon_07.png" alt="">
-                        추가 기능을 준비중 입니다.
+                        <span>추가 기능을 준비중 입니다.</span>
                     </div>
                 </div>
             </section>
             <section class="col left">
                 <div class="container">
                     <div class="content-img">
-                        <img src="./images/section1.png" alt="" style="width:100%;">
+                        <img src="./images/section1.png" alt="" style="width:100%; height:auto;">
                     </div>
                     <div class="content-text">
                         <img src="./images/contents_icon_02.png" alt=""class="text-icon">
                         <h2>PC에서 가볍게,<br>새로운 문자 보내기부터<br>그룹문자 발송, 수신,관리까지! </h2>
-                        <p>휴대폰으로 오는 문자들을 이제 PC에서<br>확인하고 모아보고 관리하세요.</p>
+                        <p>휴대폰으로 오는 문자들을 이제 PC에서 확인하고<br>모아보고 관리하세요.</p>
                     </div>
                 </div>
             </section>
@@ -164,8 +167,8 @@
             <section class="row">
                 <div class="container">
                     <img src="./images/contents_icon_04.png" alt=""class="text-icon">
-                    <h2><small>나 답게, 내 PC에 가장 어울리게</small><br>나에게 맞게 설정하는 테마 기능</h2>
-                    <span>PC 앱의 색상과 배경화면을 변경하고<br>나와 어울리는 모습을 찾아보세요. </span>
+                    <h2>나 답게, 내 PC에 가장 어울리게</h2>
+                    <span>PC 앱의 색상과 배경화면을 나에게 맞게 변경하고<br>어울리는 모습을 찾아보세요</span>
                     <div class="content-img">
                         <img src="./images/theme.png" alt="" style="width:100%;">
                     </div>
@@ -185,12 +188,18 @@
                 </div>
             </footer>
             </div>
+        <div id="outdated">
+             <h6>Your browser is out-of-date!</h6>
+             <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+             <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+        </div>
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
 
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/outdatedbrowser.min.js"></script>
 
     </body>
 </html>

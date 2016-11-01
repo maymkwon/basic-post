@@ -1,5 +1,38 @@
 (function($) {
     $(document).ready(function(){
+                //event listener: DOM ready
+                outdatedBrowser({
+                bgColor: '#f25648',
+                color: '#ffffff',
+                lowerThan: 'boxShadow',
+                languagePath: 'ko.html'
+            })
+
+
+
+        function addLoadEvent(func) {
+            var oldonload = window.onload;
+            if (typeof window.onload != 'function') {
+                window.onload = func;
+            } else {
+                window.onload = function() {
+                    if (oldonload) {
+                        oldonload();
+                    }
+                    func();
+                }
+            }
+        }
+        //call plugin function after DOM ready
+        addLoadEvent(function(){
+            outdatedBrowser({
+                bgColor: '#f25648',
+                color: '#ffffff',
+                lowerThan: 'boxShadow',
+                languagePath: 'ko.html'
+            })
+        });
+
         $(window).scroll(function() {
 
             if ($(window).scrollTop() > 100) {
@@ -8,16 +41,16 @@
                 $('.header').removeClass('sticky');
             }
 
-            var wScroll = $(this).scrollTop();
-            var function_list =  $('.function').offset().top - ($(window).height() / 1.2);
-            if (wScroll > function_list) {
-                $('.function-list li').each(function(i){
-                    setTimeout(function(){
-                        $('.function-list li').eq(i).addClass('showing');
-                    }, 150 * (i+1));
-                });
-                $('.function-add img').addClass('showing');
-            }
+            // var wScroll = $(this).scrollTop();
+            // var function_list =  $('.function').offset().top - ($(window).height() / 1.2);
+            // if (wScroll > function_list) {
+            //     $('.function-list li').each(function(i){
+            //         setTimeout(function(){
+            //             $('.function-list li').eq(i).addClass('showing');
+            //         }, 150 * (i+1));
+            //     });
+            //     $('.function-add img').addClass('showing');
+            // }
         });
         var $transitionImg = $('.content-img img');
         $transitionImg.css({

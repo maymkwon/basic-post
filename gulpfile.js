@@ -73,8 +73,8 @@ gulp.task('img', function () {
 var processors =[
         precss({}),
         lost,
+        autoprefixer(),
         rucksack({  fallbacks: true }),
-        autoprefixer({ browsers: ['last 3 versions'] }),
         colorRgbaFallback,
         styleGuide({
                 project: 'Project name',

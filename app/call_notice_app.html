@@ -1,0 +1,388 @@
+<!doctype html>
+<html class="no-js" lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>T Callsync</title>
+        <meta name="description" content="가장 쉽고 빠르게, PC에서 문자와 전화를 관리하는 방법! T Callsync">
+        <meta name="viewport" content=""width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable="no">
+        <meta name="Subject" content="문자와 전화를 관리">
+        <meta name="Title" content="T콜싱크">
+        <meta name="Keywords" content="문자 전화 SMS 관리">
+        <meta name="Author" content=" SKTelecom">
+        <meta name="Publisher" content=" SKTelecom">
+        <meta name="Reply-To(Email)" content=" tcallsync@tcallsync.com">
+        <meta name="Location" content="South Korea Seoul">
+        <meta name="Distribution" content=" SKTelecom">
+        <meta name="Copyright" content=" SKTelecom">
+        <meta name="Robots" content="ALL">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+
+        <!-- <link rel="stylesheet" href="css/style.min.css"> -->
+        <style>
+        <style>
+        *{
+            font-family: Arial,sans-serif,Helvetica,'apple sd gothic neo','malgun gothic','Helvetica Neue','Nanum Gothic';
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            color: inherit;
+        }
+        .form{
+            /*margin-top: 76px;*/
+            padding: 0;
+        }
+        .notice .form-subject{
+          padding-left: 80px;
+          font-size: 14px;
+        }
+        .form .container{
+          font-family: 'Malgun Gothic';
+        }
+
+        .form .form-tit{
+          text-align: center;
+          background-color: #333;
+          background: url('../images/notice-bg.png')no-repeat center -61px;
+          padding: 40px 0;
+        }
+
+        .form .form-tit h2{
+          font-size: 44px;
+          font-weight: bold;
+        }
+
+        .form .form-tit p{
+          font-size: 14px;
+          color:#414141;
+        }
+
+        .form.notice{
+          margin-bottom: 50px;
+        }
+
+        .form.faq .form-tit{
+          background: #fff url('../images/faq-bg-purple.png')no-repeat center -61px;
+          background-blend-mode: multiply;
+        }
+
+        .form.contact .form-tit{
+          background: #fff url('../images/faq-bg.png')no-repeat center -61px;
+          background-blend-mode: multiply;
+        }
+
+
+        .form-list-wrap{
+            /*margin: 60px 0;*/
+            border-top: 2px solid #373737;
+        }
+
+        .form-list .form-subject{
+          cursor: pointer;
+          /*padding: 0 20px;*/
+          display: block;
+          position: relative;
+          border-bottom: 1px solid #dedede;
+          height: 60px;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-align: center;
+              align-items: center;
+        }
+
+        .form-list .form-subject p{
+          font-size: 14px;
+        }
+
+        .form-list .form-subject strong{
+          margin-right: 20px;
+        }
+
+        /*&:focus{
+                    color:red;
+                }*/
+
+        .form-list .form-subject .date{
+          position: absolute;
+          right: 54px;
+          top: 0;
+          line-height: 60px;
+        }
+
+        .form-list .form-subject:after{
+          content: '';
+          position: absolute;
+          right: 20px;
+          top: 50%;
+          margin-top: -5px;
+          width: 16px;
+          height: 10px;
+          background: url('../images/normal-arr.png')no-repeat center;
+          background-size: 16px auto ;
+          transition: all 0.2s ease-in-out;
+          -ms-transform: rotate(0);
+              transform: rotate(0);
+        }
+
+        .form-list .form-subject.active{
+          color: #25b6c8;
+        }
+
+        .form-list .form-subject.active p{
+          color: inherit;
+          font-size: ;
+        }
+
+        .form-list .form-subject.active .form-content{
+          display: block;
+        }
+
+        .form-list .form-subject.active:after{
+          -ms-transform: rotate(180deg);
+              transform: rotate(180deg);
+        }
+
+        .form-list .form-subject .type{
+          position: absolute;
+          left: 20px;
+          color: inherit;
+          font-weight: bold;
+          top: 0;
+          line-height: 60px;
+        }
+
+        .form-list .form-content{
+          border-bottom: 1px solid #dedede;
+          background-color: #f8f8f8;
+          font-size: 13px;
+          padding: 30px;
+          display: none;
+        }
+        .pagination{
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: center;
+                justify-content: center;
+            text-align: center;
+        }
+        .pagination:before{
+          content: '';
+          display: table;
+        }
+        .pagination:after{
+          content: '';
+          display: table;
+          clear: both;
+        }
+        .pagination li+li{
+          margin-left: 10px;
+        }
+        .pagination li{
+          float: left;
+        }
+        .pagination li a{
+          font-size: 16px;
+          display: block;
+          width: 26px;
+          height: 26px;
+          text-align: center;
+          line-height: 26px;
+          border-radius: 5px;
+          font-weight: bold
+        }
+        .pagination li a:hover{
+          background-color: #eee;
+        }
+        .pagination li a.active{
+          border: 1px solid #cecece;
+        }
+        .pagination .Previous span, .pagination .Next span{
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          background:url('../images/normal-arr.png')no-repeat center;
+          background-size: 10px auto;
+          -ms-transform: rotate(90deg);
+              transform: rotate(90deg);
+        }
+        .pagination .Next span{
+          -ms-transform: rotate(-90deg);
+              transform: rotate(-90deg);
+        }
+        </style>
+        </style>
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="body_wrap sub">
+
+            <section class="form notice">
+                <div class="container">
+                    <ul class="form-list-wrap">
+                        <li class="form-list">
+                            <div class="form-subject">
+                                <span class="type">[이벤트]</span>
+                                <p>서비스의 주요 기능은?</p>
+                                <span class="date">date</span>
+                            </div>
+                            <div class="form-content">
+                                consectetur adipisicing elit. Officia inventore quam illo provident excepturi aspernatur nobis ex omnis. Perferendis quibusdam non atque et earum, placeat tempora libero quis aspernatur ad.
+                            </div>
+                        </li>
+                        <li class="form-list">
+                            <div class="form-subject">
+                                <span class="type">[이벤트]</span>
+                                <p>서비스의 주요 기능은?</p>
+                                <span class="date">date</span>
+                            </div>
+                            <div class="form-content">
+                                consectetur adipisicing elit. Officia inventore quam illo provident excepturi aspernatur nobis ex omnis. Perferendis quibusdam non atque et earum, placeat tempora libero quis aspernatur ad.
+                            </div>
+                        </li>
+                        <li class="form-list">
+                            <div class="form-subject">
+                                <span class="type">[이벤트]</span>
+                                <p>서비스의 주요 기능은?</p>
+                                <span class="date">date</span>
+                            </div>
+                            <div class="form-content">
+                                consectetur adipisicing elit. Officia inventore quam illo provident excepturi aspernatur nobis ex omnis. Perferendis quibusdam non atque et earum, placeat tempora libero quis aspernatur ad.
+                            </div>
+                        </li>
+                        <li class="form-list ">
+                            <div class="form-subject">
+                                <span class="type">[이벤트]</span>
+                                <p>서비스의 주요 기능은?</p>
+                                <span class="date">date</span>
+                            </div>
+                            <div class="form-content">
+                                consectetur adipisicing elit. Officia inventore quam illo provident excepturi aspernatur nobis ex omnis. Perferendis quibusdam non atque et earum, placeat tempora libero quis aspernatur ad.
+                            </div>
+                        </li>
+                        <li class="form-list ">
+                            <div class="form-subject">
+                                <span class="type">[이벤트]</span>
+                                <p>서비스의 주요 기능은?</p>
+                                <span class="date">date</span>
+                            </div>
+                            <div class="form-content">
+                                consectetur adipisicing elit. Officia inventore quam illo provident excepturi aspernatur nobis ex omnis. Perferendis quibusdam non atque et earum, placeat tempora libero quis aspernatur ad.
+                            </div>
+                        </li>
+                        <li class="form-list ">
+                            <div class="form-subject">
+                                <span class="type">[이벤트]</span>
+                                <p>서비스의 주요 기능은?</p>
+                                <span class="date">date</span>
+                            </div>
+                            <div class="form-content">
+                                consectetur adipisicing elit. Officia inventore quam illo provident excepturi aspernatur nobis ex omnis. Perferendis quibusdam non atque et earum, placeat tempora libero quis aspernatur ad.
+                            </div>
+                        </li>
+                        <li class="form-list ">
+                            <div class="form-subject">
+                                <span class="type">[이벤트]</span>
+                                <p>서비스의 주요 기능은?</p>
+                                <span class="date">date</span>
+                            </div>
+                            <div class="form-content">
+                                consectetur adipisicing elit. Officia inventore quam illo provident excepturi aspernatur nobis ex omnis. Perferendis quibusdam non atque et earum, placeat tempora libero quis aspernatur ad.
+                            </div>
+                        </li>
+                        <li class="form-list ">
+                            <div class="form-subject">
+                                <span class="type">[이벤트]</span>
+                                <p>서비스의 주요 기능은?</p>
+                                <span class="date">date</span>
+                            </div>
+                            <div class="form-content">
+                                consectetur adipisicing elit. Officia inventore quam illo provident excepturi aspernatur nobis ex omnis. Perferendis quibusdam non atque et earum, placeat tempora libero quis aspernatur ad.
+                            </div>
+                        </li>
+                        <li class="form-list ">
+                            <div class="form-subject">
+                                <span class="type">[이벤트]</span>
+                                <p>서비스의 주요 기능은?</p>
+                                <span class="date">date</span>
+                            </div>
+                            <div class="form-content">
+                                consectetur adipisicing elit. Officia inventore quam illo provident excepturi aspernatur nobis ex omnis. Perferendis quibusdam non atque et earum, placeat tempora libero quis aspernatur ad.
+                            </div>
+                        </li>
+                        <li class="form-list ">
+                            <div class="form-subject">
+                                <span class="type">[이벤트]</span>
+                                <p>서비스의 주요 기능은?</p>
+                                <span class="date">date</span>
+                            </div>
+                            <div class="form-content">
+                                consectetur adipisicing elit. Officia inventore quam illo provident excepturi aspernatur nobis ex omnis. Perferendis quibusdam non atque et earum, placeat tempora libero quis aspernatur ad.
+                            </div>
+                        </li>
+                    </ul>
+
+
+                    <nav aria-label="Page-navigation">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous" class='Previous'>
+                                    <span aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li><a href="#" class="active">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next" class="Next">
+                                    <span aria-hidden="true"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </section>
+            </div>
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script type="text/javascript">
+        $('.form-list-wrap > li:eq(0)').addClass('active').next().slideDown();
+        $('.form-list-wrap .form-subject').click(function(j) {
+            var dropDown = $(this).closest('.form-list').find('.form-content');
+
+            $(this).closest('.form-list-wrap').find('.form-content').not(dropDown).slideUp();
+
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+            } else {
+                $(this).closest('.form-list-wrap').find('.form-list .active').removeClass('active');
+                $(this).addClass('active');
+            }
+            dropDown.stop(false, true).slideToggle();
+            j.preventDefault();
+        });
+        </script>
+        <script src="js/plugins.js"></script>
+        <!-- <script src="js/main.js"></script> -->
+
+    </body>
+</html>
