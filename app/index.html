@@ -90,7 +90,16 @@
                     </div>
                 </div>
             </main>
-
+            <div class="event">
+                <div class="ev_img">
+                    <img src="./images/callsync_pc_event.jpg" alt="">
+                    <a href="https://sktapps.co.kr/callsync/desktop/?utm_source=callsync_w&utm_medium=banner_main&utm_campaign=callsyncpromotion" class="ev_link"></a>
+                </div>
+                <div class="btn">
+                    <a href="#"id="forgetMe">다시 보지 않기</a>
+                    <a href="#" class="ev_close">닫기</a>
+                </div>
+            </div>
 
             <section class="function">
                 <div class="container">
@@ -196,7 +205,19 @@
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-
+        <script>
+        var ev = $('.event').addClass('close');
+            if(localStorage.getItem("DontShow")) {
+                $('.event').addClass('close');
+            }
+            $(document).on("click", "#forgetMe", function() {
+                localStorage.setItem("DontShow", "true");
+            });
+            $('.ev_close').click(function(e){
+                e.preventDefault();
+                $('.event').addClass('close');
+            });
+        </script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script src="js/outdatedbrowser.min.js"></script>

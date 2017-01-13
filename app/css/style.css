@@ -784,6 +784,59 @@ header nav ul li a{
   right: 83px;
   z-index: 0;
 }
+.event{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -261px;
+    margin-left: -244px;
+    z-index: 99999;
+    background-color: #fff;
+    -moz-box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+         box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+.event .ev_img{
+  position: relative;
+}
+.event .ev_link{
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  left: 50%;
+  bottom: 30px;
+  margin-left: -100px;
+}
+.event .btn{
+  background-color: #333;
+  height: 40px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.event .btn a+a{
+  border-left: 1px solid #fff;
+}
+.event .btn a{
+  color:#fff;
+  width: 50%;
+  text-align: center;
+}
+.event .ev_close{
+  display: inline-block;
+}
+.event.close{
+  display: none;
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+}
 main{
         /* fallback */
     position: relative;
